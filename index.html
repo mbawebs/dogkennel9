@@ -5,9 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ZAG KENNELS | FAT JOE</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600;700&family=Montserrat:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600;700&family=Montserrat:wght@300;400;500;700;900&family=Rubik+Spray+Paint&display=swap" rel="stylesheet">
 
   <style>
+
     :root{
       --black:#050505;
       --panel:#0d0d0d;
@@ -19,8 +20,15 @@
       --line:rgba(255,0,0,.22);
     }
 
-    *{margin:0;padding:0;box-sizing:border-box}
-    html{scroll-behavior:smooth}
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
 
     body{
       font-family:'Montserrat',sans-serif;
@@ -29,7 +37,10 @@
       overflow-x:hidden;
     }
 
-    a{text-decoration:none;color:inherit}
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
 
     body::before{
       content:"";
@@ -37,34 +48,30 @@
       inset:0;
       background:
         linear-gradient(rgba(0,0,0,.88),rgba(0,0,0,.97)),
+        radial-gradient(circle at 20% 30%, rgba(255,0,0,.18), transparent 28%),
+        radial-gradient(circle at 80% 60%, rgba(255,255,255,.05), transparent 25%),
         repeating-linear-gradient(
-          0deg,
-          #111 0px,
-          #111 38px,
-          #070707 39px,
-          #070707 42px
-        ),
-        repeating-linear-gradient(
-          90deg,
-          transparent 0px,
-          transparent 90px,
-          rgba(255,0,0,.06) 91px,
-          rgba(255,0,0,.06) 94px
+          135deg,
+          #101010 0px,
+          #101010 16px,
+          #070707 17px,
+          #070707 22px
         );
       z-index:-3;
     }
 
     body::after{
-      content:"ZAG KENNELS / FAT JOE / TOP CHOCOLATE STUD / STREET EXOTICS / BEST EXOTICS IN THE COUNTRY / ";
+      content:"ZAG KENNELS / FAT JOE / STREET EXOTICS / TOP CHOCOLATE STUD / NO WEAK BLOOD / ";
       position:fixed;
       left:-80px;
       bottom:20px;
-      font-family:'Teko',sans-serif;
-      font-size:8vw;
-      color:rgba(255,0,0,.05);
+      font-family:'Rubik Spray Paint', cursive;
+      font-size:5vw;
+      color:rgba(255,0,0,.07);
       white-space:nowrap;
       z-index:-1;
       pointer-events:none;
+      transform:rotate(-3deg);
     }
 
     .navbar{
@@ -83,15 +90,20 @@
     }
 
     .logo{
-      font-family:'Teko',sans-serif;
-      font-size:2.1rem;
-      letter-spacing:2px;
+      font-family:'Rubik Spray Paint', cursive;
+      font-size:2rem;
+      letter-spacing:1px;
       text-transform:uppercase;
       color:#fff;
-      text-shadow:3px 3px 0 var(--darkred);
+      text-shadow:
+        3px 3px 0 #d00000,
+        6px 6px 0 #000,
+        0 0 18px rgba(255,0,0,.45);
     }
 
-    .logo span{color:var(--red2)}
+    .logo span{
+      color:var(--red2);
+    }
 
     .nav-tag{
       justify-self:center;
@@ -115,7 +127,9 @@
       letter-spacing:1px;
     }
 
-    .nav-links a:hover{color:var(--red2)}
+    .nav-links a:hover{
+      color:var(--red2);
+    }
 
     .hero{
       min-height:100vh;
@@ -140,7 +154,7 @@
       background-size:cover;
       background-position:center;
       z-index:-2;
-      filter:contrast(1.18) saturate(1.05) brightness(.85);
+      filter:contrast(1.2) saturate(1.1) brightness(.78);
     }
 
     .hero::after{
@@ -148,11 +162,11 @@
       position:absolute;
       right:38px;
       top:145px;
-      font-family:'Teko',sans-serif;
-      font-size:10rem;
-      letter-spacing:5px;
+      font-family:'Rubik Spray Paint', cursive;
+      font-size:9rem;
       color:rgba(255,0,0,.10);
       z-index:-1;
+      transform:rotate(-6deg);
     }
 
     .hero-left{
@@ -171,17 +185,21 @@
     }
 
     h1{
-      font-family:'Teko',sans-serif;
-      font-size:clamp(4.5rem,12vw,10rem);
-      line-height:.78;
+      font-family:'Rubik Spray Paint', cursive;
+      font-size:clamp(4rem,10vw,8.5rem);
+      line-height:.95;
       text-transform:uppercase;
-      letter-spacing:-2px;
-      max-width:780px;
+      letter-spacing:1px;
       color:#fff;
-      text-shadow:5px 5px 0 var(--darkred), 10px 10px 0 #111;
+      text-shadow:
+        4px 4px 0 #d00000,
+        9px 9px 0 #000,
+        0 0 30px rgba(255,0,0,.35);
     }
 
-    .slash{color:var(--red2)}
+    .slash{
+      color:var(--red2);
+    }
 
     .hero-copy{
       margin-top:26px;
@@ -212,7 +230,7 @@
       transition:.2s ease;
     }
 
-    .btn.gold{
+    .btn.red{
       background:linear-gradient(135deg,#ff2a2a,#8b0000,#111);
       border-color:rgba(255,255,255,.18);
       color:#fff;
@@ -254,7 +272,9 @@
       border-right:1px solid var(--line);
     }
 
-    .stat:last-child{border-right:none}
+    .stat:last-child{
+      border-right:none;
+    }
 
     .stat strong{
       display:block;
@@ -293,13 +313,15 @@
       line-height:.8;
     }
 
-    .section-header h2{
-      font-family:'Teko',sans-serif;
-      font-size:clamp(3rem,7vw,6rem);
-      text-transform:uppercase;
-      line-height:.85;
-      color:#fff;
-      text-shadow:4px 4px 0 var(--darkred);
+    .section-header h2,
+    .dog-info h3,
+    .sale-copy h3,
+    .contact h2{
+      font-family:'Rubik Spray Paint', cursive;
+      letter-spacing:1px;
+      text-shadow:
+        3px 3px 0 #d00000,
+        7px 7px 0 #000;
     }
 
     .section-header p{
@@ -344,10 +366,11 @@
       right:24px;
       bottom:-18px;
       color:rgba(255,0,0,.07);
-      font-family:'Teko',sans-serif;
-      font-size:12rem;
+      font-family:'Rubik Spray Paint', cursive;
+      font-size:8rem;
       z-index:1;
       pointer-events:none;
+      transform:rotate(-8deg);
     }
 
     .dog-img{
@@ -371,12 +394,10 @@
     }
 
     .dog-info h3{
-      font-family:'Teko',sans-serif;
       font-size:4rem;
       line-height:.88;
       color:var(--white);
       text-transform:uppercase;
-      text-shadow:3px 3px 0 var(--darkred);
     }
 
     .dog-info h3 span{
@@ -421,49 +442,6 @@
       letter-spacing:1px;
     }
 
-    .for-sale-strip{
-      display:grid;
-      grid-template-columns:1.1fr .9fr;
-      min-height:470px;
-      border:1px solid var(--line);
-      background:#090909;
-      overflow:hidden;
-    }
-
-    .sale-img{
-      background:url('assets/for_sale/for-sale.png');
-      background-size:contain;
-      background-position:center;
-      background-repeat:no-repeat;
-      background-color:#070707;
-      cursor:pointer;
-    }
-
-    .sale-copy{
-      padding:42px;
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      border-left:1px solid var(--line);
-    }
-
-    .sale-copy h3{
-      font-family:'Teko',sans-serif;
-      font-size:clamp(3rem,6vw,5.5rem);
-      text-transform:uppercase;
-      line-height:.85;
-      text-shadow:4px 4px 0 var(--darkred);
-    }
-
-    .sale-copy h3 span{color:var(--red2)}
-
-    .sale-copy p{
-      margin-top:22px;
-      color:#c8c8c8;
-      line-height:1.8;
-      max-width:520px;
-    }
-
     .gallery{
       display:grid;
       grid-template-columns:1.4fr .8fr .8fr;
@@ -499,7 +477,9 @@
       filter:contrast(1.15);
     }
 
-    .gallery-item.big{grid-row:span 2}
+    .gallery-item.big{
+      grid-row:span 2;
+    }
 
     .contact{
       display:grid;
@@ -509,16 +489,6 @@
       background:
         linear-gradient(rgba(0,0,0,.86),rgba(0,0,0,.92));
     }
-
-    .contact h2{
-      font-family:'Teko',sans-serif;
-      font-size:clamp(3.5rem,8vw,7rem);
-      line-height:.85;
-      text-transform:uppercase;
-      text-shadow:4px 4px 0 var(--darkred);
-    }
-
-    .contact h2 span{color:var(--red2)}
 
     .contact p{
       color:#c9c9c9;
@@ -544,53 +514,17 @@
       background:#050505;
     }
 
-    .lightbox{
-      position:fixed;
-      inset:0;
-      background:rgba(0,0,0,.95);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      z-index:99999;
-      opacity:0;
-      pointer-events:none;
-      transition:.25s ease;
-      backdrop-filter:blur(12px);
-    }
-
-    .lightbox.active{
-      opacity:1;
-      pointer-events:auto;
-    }
-
-    .lightbox img{
-      max-width:92%;
-      max-height:90%;
-      border:1px solid rgba(255,0,0,.35);
-    }
-
-    .close-lightbox{
-      position:absolute;
-      top:28px;
-      right:36px;
-      width:54px;
-      height:54px;
-      background:linear-gradient(135deg,#ff2a2a,#8b0000,#111);
-      color:#fff;
-      border:none;
-      font-size:1.4rem;
-      cursor:pointer;
-      font-weight:900;
-    }
-
     @media(max-width:950px){
+
       .navbar{
         grid-template-columns:1fr;
         gap:12px;
         text-align:center;
       }
 
-      .nav-tag{display:none}
+      .nav-tag{
+        display:none;
+      }
 
       .nav-links{
         justify-self:center;
@@ -604,12 +538,13 @@
       }
 
       .street-grid,
-      .for-sale-strip,
       .contact{
         grid-template-columns:1fr;
       }
 
-      .dog-card{grid-template-columns:1fr}
+      .dog-card{
+        grid-template-columns:1fr;
+      }
 
       .dog-img{
         height:390px;
@@ -617,220 +552,273 @@
         border-bottom:1px solid var(--line);
       }
 
-      .sale-copy{
-        border-left:none;
-        border-top:1px solid var(--line);
-      }
-
       .gallery{
         grid-template-columns:1fr;
         grid-auto-rows:280px;
       }
 
-      .gallery-item.big{grid-row:span 1}
+      .gallery-item.big{
+        grid-row:span 1;
+      }
 
       footer{
         flex-direction:column;
         text-align:center;
       }
     }
+
   </style>
 </head>
 
 <body>
 
 <header class="navbar">
-  <div class="logo">ZAG <span>KENNELS</span></div>
-  <div class="nav-tag">✦ Street Exotic Bully Program ✦</div>
+
+  <div class="logo">
+    ZAG <span>KENNELS</span>
+  </div>
+
+  <div class="nav-tag">
+    ✦ STREET EXOTICS ✦
+  </div>
+
   <nav class="nav-links">
     <a href="#home">Home</a>
     <a href="#studs">Fat Joe</a>
     <a href="#program">Program</a>
-    <a href="#upcoming">Upcoming</a>
     <a href="#gallery">Gallery</a>
     <a href="#contact">Contact</a>
   </nav>
+
 </header>
 
 <section class="hero" id="home">
+
   <div class="hero-left">
-    <div class="eyebrow">ZAG KENNELS / Home of FAT JOE / Top Chocolate Stud</div>
-    <h1>ZAG<br><span class="slash">KENNELS</span></h1>
-    <p class="hero-copy">
-      ZAG KENNELS is a street-driven exotic bully camp built on pressure, structure, and presence. Home of FAT JOE — a top chocolate stud carrying that heavy look, compact frame, big head, and raw street energy. The best exotics in the country, bred with purpose, power, and real ZAG attitude.
-    </p>
-    <div class="buttons">
-      <a href="#studs" class="btn gold">View FAT JOE</a>
-      <a href="#contact" class="btn">Tap In</a>
+
+    <div class="eyebrow">
+      ZAG KENNELS / HOME OF FAT JOE / TOP CHOCOLATE STUD
     </div>
+
+    <h1>
+      ZAG<br>
+      <span class="slash">KENNELS</span>
+    </h1>
+
+    <p class="hero-copy">
+      ZAG KENNELS is a street-driven exotic bully camp built on pressure, structure, and real kennel presence. Home of FAT JOE — a top chocolate stud carrying compact power, heavy bone, massive headpiece, and raw street energy. The best exotics in the country. Built different.
+    </p>
+
+    <div class="buttons">
+      <a href="#studs" class="btn red">VIEW FAT JOE</a>
+      <a href="#contact" class="btn">TAP IN</a>
+    </div>
+
   </div>
 
   <div class="hero-panel">
+
     <div class="hero-panel-img" style="background-image:url('assets/hero/hero.png');"></div>
+
     <div class="hero-stats">
-      <div class="stat"><strong>ZAG</strong><span>Bloodline</span></div>
-      <div class="stat"><strong>FAT JOE</strong><span>Main Stud</span></div>
-      <div class="stat"><strong>CHOC</strong><span>Top Chocolate</span></div>
+
+      <div class="stat">
+        <strong>ZAG</strong>
+        <span>Bloodline</span>
+      </div>
+
+      <div class="stat">
+        <strong>FAT JOE</strong>
+        <span>Main Stud</span>
+      </div>
+
+      <div class="stat">
+        <strong>CHOC</strong>
+        <span>Top Chocolate</span>
+      </div>
+
     </div>
+
   </div>
+
 </section>
 
 <section id="studs">
+
   <div class="section-header">
-    <div class="section-number">01</div>
-    <div>
-      <h2>Featured Stud</h2>
-      <p>
-        FAT JOE is the face of ZAG KENNELS — a top chocolate stud with serious exotic type, heavy bone, compact power, and the kind of street presence that turns heads instantly.
-      </p>
+
+    <div class="section-number">
+      01
     </div>
+
+    <div>
+
+      <h2>
+        Featured Stud
+      </h2>
+
+      <p>
+        FAT JOE is the face of ZAG KENNELS — a top chocolate stud with serious exotic type, compact power, heavy structure, and that street energy that separates him from the rest.
+      </p>
+
+    </div>
+
   </div>
 
   <div class="street-grid">
+
     <div class="dog-card">
+
       <div class="dog-img" style="background-image:url('assets/studs/stud1.png');"></div>
+
       <div class="dog-info">
+
         <div>
-          <h3><span>FAT JOE</span></h3>
+
+          <h3>
+            <span>FAT JOE</span>
+          </h3>
+
           <div class="info-list">
-            <div><b>Camp</b><span>ZAG KENNELS</span></div>
-            <div><b>Title</b><span>Top Chocolate Stud</span></div>
-            <div><b>Style</b><span>Exotic Bully / Compact Power / Heavy Structure</span></div>
-            <div><b>Energy</b><span>Street / Raw / Dominant / Built Different</span></div>
+
+            <div>
+              <b>Camp</b>
+              <span>ZAG KENNELS</span>
+            </div>
+
+            <div>
+              <b>Title</b>
+              <span>Top Chocolate Stud</span>
+            </div>
+
+            <div>
+              <b>Style</b>
+              <span>Street Exotic / Heavy Structure</span>
+            </div>
+
+            <div>
+              <b>Energy</b>
+              <span>Raw / Dominant / Built Different</span>
+            </div>
+
           </div>
+
         </div>
-        <span class="badge">Home of FAT JOE</span>
+
+        <span class="badge">
+          HOME OF FAT JOE
+        </span>
+
       </div>
+
     </div>
+
   </div>
+
 </section>
 
 <section id="program">
+
   <div class="section-header">
-    <div class="section-number">02</div>
+
+    <div class="section-number">
+      02
+    </div>
+
     <div>
-      <h2>ZAG Program</h2>
+
+      <h2>
+        ZAG PROGRAM
+      </h2>
+
       <p>
-        A street-style exotic bully program focused on clean structure, heavy frames, big heads, compact bodies, and that unmistakable ZAG KENNELS presence.
+        Focused on producing compact exotic bullies with pressure, muscle, heavy heads, clean structure, and undeniable street presence.
       </p>
+
     </div>
+
   </div>
 
-  <div class="street-grid">
-    <div class="dog-card">
-      <div class="dog-img" style="background-image:url('assets/females/females.png');"></div>
-      <div class="dog-info">
-        <div>
-          <h3>Street <span>Exotics</span></h3>
-          <div class="info-list">
-            <div><b>Focus</b><span>The Best Exotics In The Country</span></div>
-            <div><b>Look</b><span>Low / Wide / Heavy / Clean</span></div>
-            <div><b>Standard</b><span>Quality Over Quantity</span></div>
-            <div><b>Brand</b><span>ZAG KENNELS USA</span></div>
-          </div>
-        </div>
-        <span class="badge">Built For Pressure</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="upcoming">
-  <div class="section-header">
-    <div class="section-number">03</div>
-    <div>
-      <h2>Upcoming</h2>
-      <p>
-        Future breedings, upcoming productions, available pups, and serious movements from the ZAG KENNELS camp.
-      </p>
-    </div>
-  </div>
-
-  <div class="for-sale-strip">
-    <div class="sale-img"></div>
-    <div class="sale-copy">
-      <h3>ZAG<br><span>Heat</span></h3>
-      <p>
-        Stay locked in for FAT JOE updates, future breedings, upcoming litters, available pups, new females, and street-certified exotic productions from ZAG KENNELS.
-      </p>
-      <div class="buttons">
-        <a href="#contact" class="btn gold">Inquire</a>
-        <a href="#gallery" class="btn">View Gallery</a>
-      </div>
-    </div>
-  </div>
 </section>
 
 <section id="gallery">
+
   <div class="section-header">
-    <div class="section-number">04</div>
-    <div>
-      <h2>Gallery / ZAG Files</h2>
-      <p>
-        A raw visual look at ZAG KENNELS, FAT JOE, future productions, street shots, kennel updates, and the movement behind the camp.
-      </p>
+
+    <div class="section-number">
+      03
     </div>
+
+    <div>
+
+      <h2>
+        STREET FILES
+      </h2>
+
+      <p>
+        Productions, future breedings, street shots, kennel life, and all the pressure behind ZAG KENNELS.
+      </p>
+
+    </div>
+
   </div>
 
   <div class="gallery">
+
     <div class="gallery-item big" style="background-image:url('assets/gallery/gallery-1.png');"></div>
+
     <div class="gallery-item" style="background-image:url('assets/gallery/gallery-2.png');"></div>
+
     <div class="gallery-item" style="background-image:url('assets/productions/productions-1.png');"></div>
+
     <div class="gallery-item" style="background-image:url('assets/productions/productions-2.png');"></div>
+
   </div>
+
 </section>
 
 <section id="contact" class="contact">
+
   <div>
-    <h2>Tap<br><span>In.</span></h2>
+
+    <h2>
+      TAP<br>
+      <span>IN.</span>
+    </h2>
+
     <p>
-      Connect with ZAG KENNELS for FAT JOE stud info, breedings, upcoming productions, available pups, or serious exotic bully inquiries.
+      Contact ZAG KENNELS for FAT JOE stud info, future breedings, available pups, productions, and serious business only.
     </p>
+
   </div>
 
   <div class="contact-box">
+
     <div class="buttons">
-      <a href="#" class="btn gold">Instagram</a>
+
+      <a href="#" class="btn red">Instagram</a>
+
       <a href="#" class="btn">WhatsApp</a>
+
       <a href="#" class="btn">Facebook</a>
+
     </div>
+
   </div>
+
 </section>
 
 <footer>
-  <span>© 2026 ZAG KENNELS</span>
-  <span>Website powered by MBA Webs</span>
+
+  <span>
+    © 2026 ZAG KENNELS
+  </span>
+
+  <span>
+    WEBSITE POWERED BY MBA WEBS
+  </span>
+
 </footer>
-
-<div class="lightbox" id="lightbox">
-  <button class="close-lightbox" id="closeLightbox">✕</button>
-  <img src="" id="lightbox-img">
-</div>
-
-<script>
-const lightbox=document.getElementById('lightbox');
-const lightboxImg=document.getElementById('lightbox-img');
-const closeLightbox=document.getElementById('closeLightbox');
-
-document.querySelectorAll('.dog-img,.gallery-item,.sale-img,.hero-panel-img').forEach(item=>{
-  item.addEventListener('click',()=>{
-    const bg=item.style.backgroundImage || getComputedStyle(item).backgroundImage;
-    const url=bg.slice(5,-2);
-    lightboxImg.src=url;
-    lightbox.classList.add('active');
-  });
-});
-
-closeLightbox.addEventListener('click',()=>{
-  lightbox.classList.remove('active');
-});
-
-lightbox.addEventListener('click',(e)=>{
-  if(e.target===lightbox){
-    lightbox.classList.remove('active');
-  }
-});
-</script>
 
 </body>
 </html>
